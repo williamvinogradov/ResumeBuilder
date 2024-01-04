@@ -7,12 +7,10 @@ export interface DescriptionBlockPreviewProps {
 }
 
 export const DescriptionBlockPreview: React.FC<
-  DescriptionBlockPreviewProps
-> = ({ data: { title, description } }) => {
-  return (
-    <>
-      <h3>{title}</h3>
-      <Markdown>{description}</Markdown>
-    </>
-  );
-};
+DescriptionBlockPreviewProps
+> = ({ data: { title, description } }) => (
+  <>
+    <h3>{title}</h3>
+    <Markdown>{description}</Markdown>
+  </>
+);

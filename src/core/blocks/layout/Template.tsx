@@ -20,29 +20,27 @@ export const LayoutBlockEdit: React.FC<LayoutBlockEditProps> = ({
   onDeleteClick,
   children,
   isRoot,
-}) => {
-  return isRoot ? (
-    <>
-      {children.length < 1 && (
-        <StyledLayoutBlockTemplateEmpty>
-          <Button onClick={() => onAddClick(block)}>Add block</Button>
-        </StyledLayoutBlockTemplateEmpty>
-      )}
-      {children}
-    </>
-  ) : (
-    <BlockTemplateLayout
-      displayOptions={block.displayOptions}
-      onAddClick={() => onAddClick(block)}
-      onEditClick={() => onEditClick(block)}
-      onDeleteClick={() => onDeleteClick(block)}
-    >
-      {children.length < 1 && (
-        <StyledLayoutBlockTemplateEmpty>
-          Press &quot;+&quot; to add content
-        </StyledLayoutBlockTemplateEmpty>
-      )}
-      {children.length > 0 && children}
-    </BlockTemplateLayout>
-  );
-};
+}) => (isRoot ? (
+  <>
+    {children.length < 1 && (
+    <StyledLayoutBlockTemplateEmpty>
+      <Button onClick={() => onAddClick(block)}>Add block</Button>
+    </StyledLayoutBlockTemplateEmpty>
+    )}
+    {children}
+  </>
+) : (
+  <BlockTemplateLayout
+    displayOptions={block.displayOptions}
+    onAddClick={() => onAddClick(block)}
+    onEditClick={() => onEditClick(block)}
+    onDeleteClick={() => onDeleteClick(block)}
+  >
+    {children.length < 1 && (
+    <StyledLayoutBlockTemplateEmpty>
+      Press &quot;+&quot; to add content
+    </StyledLayoutBlockTemplateEmpty>
+    )}
+    {children.length > 0 && children}
+  </BlockTemplateLayout>
+));

@@ -24,8 +24,10 @@ enum DialogType {
 }
 
 export const TemplateBuilderDialogs: React.FC<
-  TemplateBuilderDialogsProps
-> = ({ children, onAddChildBlock, onUpdateBlock, onDeleteBlock }) => {
+TemplateBuilderDialogsProps
+> = ({
+  children, onAddChildBlock, onUpdateBlock, onDeleteBlock,
+}) => {
   const [currentBlock, setCurrentBlock] = useState<BaseBlock | null>(
     null,
   );

@@ -72,29 +72,28 @@ export const DataFieldForm: React.FC<DataFieldFormProps> = ({
         return (
           <BlockConfigurationTabs
             activeTab="data"
-            dataFormElement={
+            dataFormElement={(
               <LineTextBlockDataForm
                 data={lineTextData}
                 onChange={onTemplatePreviewDataChangeHandler}
               />
-            }
+            )}
             previewElement={
               <LineTextBlockPreview data={lineTextData} />
             }
           />
         );
       case 'description':
-        const descriptionData =
-          formState.data as DescriptionBlockData;
+        const descriptionData = formState.data as DescriptionBlockData;
         return (
           <BlockConfigurationTabs
             activeTab="data"
-            dataFormElement={
+            dataFormElement={(
               <DescriptionBlockDataForm
                 data={descriptionData}
                 onChange={onTemplatePreviewDataChangeHandler}
               />
-            }
+            )}
             previewElement={
               <DescriptionBlockPreview data={descriptionData} />
             }
@@ -107,7 +106,11 @@ export const DataFieldForm: React.FC<DataFieldFormProps> = ({
 
   return (
     <>
-      <h2>{isNew ? 'Create new' : 'Edit'} data block:</h2>
+      <h2>
+        {isNew ? 'Create new' : 'Edit'}
+        {' '}
+        data block:
+      </h2>
       <Stack direction="column" spacing={2} marginTop={2}>
         <TextField
           type="text"

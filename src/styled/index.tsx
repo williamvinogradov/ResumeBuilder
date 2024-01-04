@@ -49,8 +49,7 @@ export interface StyledBlockTemplateContentProps {
 export const StyledBlockTemplateContent = styled.div<StyledBlockTemplateContentProps>`
   flex: 1 1;
   display: flex;
-  flex-direction: ${({ $direction }) =>
-    $direction === 'horizontal' ? 'row' : 'column'};
+  flex-direction: ${({ $direction }) => ($direction === 'horizontal' ? 'row' : 'column')};
   justify-content: ${({ $align }) => {
     switch ($align) {
       case 'end':
@@ -92,12 +91,11 @@ export const StyledCvContainer = styled.div`
 `;
 
 export const StyledBlockLayout = styled.div<
-  StyledPrefix<BlockDisplayOptions>
+StyledPrefix<BlockDisplayOptions>
 >`
   flex: ${({ $flex }) => $flex};
   display: flex;
-  flex-direction: ${({ $contentDirection }) =>
-    $contentDirection === 'horizontal' ? 'row' : 'column'};
+  flex-direction: ${({ $contentDirection }) => ($contentDirection === 'horizontal' ? 'row' : 'column')};
   justify-content: ${({ $contentAlign }) => {
     switch ($contentAlign) {
       case 'end':

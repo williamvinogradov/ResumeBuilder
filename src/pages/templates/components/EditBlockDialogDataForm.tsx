@@ -30,7 +30,7 @@ export interface EditBLockDialogDataFormProps {
 }
 
 export const EditBlockDialogDataForm: React.FC<
-  EditBLockDialogDataFormProps
+EditBLockDialogDataFormProps
 > = ({
   blockType,
   dataFieldId,
@@ -43,10 +43,10 @@ export const EditBlockDialogDataForm: React.FC<
     blockType === 'layout' ? 'layout' : 'data',
   );
   const [dataFieldList, setDataFieldList] = useState<
-    DataFieldListItem[] | null
+  DataFieldListItem[] | null
   >(null);
   const [selectedDataFieldId, setSelectedDataFieldId] = useState<
-    string | null
+  string | null
   >(dataFieldId);
   const [dataField, setDataField] = useState<DataField | null>(null);
 
@@ -87,10 +87,9 @@ export const EditBlockDialogDataForm: React.FC<
   }, [selectedDataFieldId]);
 
   useEffect(() => {
-    const type =
-      blockGroup === 'layout'
-        ? 'layout'
-        : dataField?.templateType ?? 'layout';
+    const type = blockGroup === 'layout'
+      ? 'layout'
+      : dataField?.templateType ?? 'layout';
 
     onBlockTypeChange(type);
   }, [blockGroup, dataField]);
@@ -149,9 +148,9 @@ export const EditBlockDialogDataForm: React.FC<
           <Skeleton height={200} />
         </Stack>
       )}
-      {blockGroup === 'data' &&
-        dataFieldList &&
-        selectedDataFieldId && (
+      {blockGroup === 'data'
+        && dataFieldList
+        && selectedDataFieldId && (
           <FormControl fullWidth margin="normal">
             <InputLabel id="block-edit-dialog-select-data-field-label">
               Data field
@@ -169,7 +168,7 @@ export const EditBlockDialogDataForm: React.FC<
               ))}
             </Select>
           </FormControl>
-        )}
+      )}
       {blockGroup === 'data' && dataField && (
         <>
           <h4>Preview:</h4>

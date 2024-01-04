@@ -13,7 +13,7 @@ export const LINE_TEXT_DEFAULT_FORM_STATE: LineTextBlockData = {
 };
 
 export const LineTextBlockDataForm: React.FC<
-  LineTextBlockDataFormProps
+LineTextBlockDataFormProps
 > = ({ data, onChange }) => {
   const onValueChangeHandler = (
     event: React.ChangeEvent<HTMLInputElement>,

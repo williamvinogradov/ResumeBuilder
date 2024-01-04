@@ -12,8 +12,7 @@ export const CvPage: React.FC = () => {
   const { candidateId } = useParams();
 
   const [candidate, setCandidate] = useState<Candidate | null>(null);
-  const [templateTree, setTemplateTree] =
-    useState<TemplateTree | null>(null);
+  const [templateTree, setTemplateTree] = useState<TemplateTree | null>(null);
 
   useEffect(() => {
     if (!candidateId) {
@@ -30,8 +29,7 @@ export const CvPage: React.FC = () => {
       templateApi.item
         .get(candidateData.cvTemplateId)
         .then(({ json: templateJson }) => {
-          const templateTreeInstance =
-            TemplateTree.fromJSON(templateJson);
+          const templateTreeInstance = TemplateTree.fromJSON(templateJson);
           templateTreeInstance.updateLeafsData(
             candidateData.dataFields,
           );

@@ -42,14 +42,12 @@ export const EditBlockDialog: React.FC<EditBlockDataDialogProps> = ({
     setActiveTab(newValue);
   };
 
-  const onBlockPropChangeHandler =
-    <T extends unknown>(propName: keyof BaseBlock) =>
-    (value: T) => {
-      setState((prevState) => ({
-        ...prevState,
-        [propName]: value,
-      }));
-    };
+  const onBlockPropChangeHandler = <T extends unknown>(propName: keyof BaseBlock) => (value: T) => {
+    setState((prevState) => ({
+      ...prevState,
+      [propName]: value,
+    }));
+  };
 
   const onConfirmHandler = () => {
     onConfirm(state);

@@ -7,19 +7,17 @@ import { DataFieldsRoot } from '../dataFields';
 import { CandidatesRoot } from '../candidates';
 import { CvRoot } from '../cv';
 
-const Root: React.FC = () => {
-  return (
-    <Routes>
-      <Route path="/cv/*" element={<CvRoot />} />
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="dataField/*" element={<DataFieldsRoot />} />
-        <Route path="template/*" element={<TemplatesRoot />} />
-        <Route path="candidate/*" element={<CandidatesRoot />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Route>
-    </Routes>
-  );
-};
+const Root: React.FC = () => (
+  <Routes>
+    <Route path="/cv/*" element={<CvRoot />} />
+    <Route path="/" element={<Layout />}>
+      <Route index element={<HomePage />} />
+      <Route path="dataField/*" element={<DataFieldsRoot />} />
+      <Route path="template/*" element={<TemplatesRoot />} />
+      <Route path="candidate/*" element={<CandidatesRoot />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Route>
+  </Routes>
+);
 
 export default Root;

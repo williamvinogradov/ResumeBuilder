@@ -52,16 +52,15 @@ export const CandidatePage: React.FC = () => {
 
   const [candidate, setCandidate] = useState<Candidate | null>(null);
   const [templates, setTemplates] = useState<
-    TemplateListItem[] | null
+  TemplateListItem[] | null
   >(null);
   const [dataFields, setDataFields] = useState<
-    DataFieldListItem[] | null
+  DataFieldListItem[] | null
   >(null);
 
   const availableDataFields = useMemo(
-    () =>
-      dataFields?.filter(({ id }) => !candidate?.dataFields[id]) ??
-      [],
+    () => dataFields?.filter(({ id }) => !candidate?.dataFields[id])
+      ?? [],
     [dataFields, candidate],
   );
 
@@ -107,29 +106,27 @@ export const CandidatePage: React.FC = () => {
     });
   };
 
-  const onCandidateDataFieldDataChangeHandler =
-    (dataFieldId: string) => (data: BlockDataUnion) => {
-      setCandidate({
-        ...candidate!,
-        dataFields: {
-          ...candidate!.dataFields,
-          [dataFieldId]: {
-            ...candidate!.dataFields[dataFieldId],
-            data,
-          },
+  const onCandidateDataFieldDataChangeHandler = (dataFieldId: string) => (data: BlockDataUnion) => {
+    setCandidate({
+      ...candidate!,
+      dataFields: {
+        ...candidate!.dataFields,
+        [dataFieldId]: {
+          ...candidate!.dataFields[dataFieldId],
+          data,
         },
-      });
-    };
+      },
+    });
+  };
 
-  const onCandidateDataFieldDeleteHandler =
-    (dataFieldId: string) => () => {
-      const newDataFields = { ...candidate!.dataFields };
-      delete newDataFields[dataFieldId];
-      setCandidate({
-        ...candidate!,
-        dataFields: newDataFields,
-      });
-    };
+  const onCandidateDataFieldDeleteHandler = (dataFieldId: string) => () => {
+    const newDataFields = { ...candidate!.dataFields };
+    delete newDataFields[dataFieldId];
+    setCandidate({
+      ...candidate!,
+      dataFields: newDataFields,
+    });
+  };
 
   const onDataFieldAddHandler = (dataField: DataField) => {
     setCandidate({

@@ -27,8 +27,7 @@ export const TemplatePage: React.FC = () => {
   const { templateId } = useParams();
   // const navigate = useNavigate();
   const [template, setTemplate] = useState<Template | null>(null);
-  const [templateTree, setTemplateTree] =
-    useState<TemplateTree | null>(null);
+  const [templateTree, setTemplateTree] = useState<TemplateTree | null>(null);
 
   const isNewTemplate = !templateId || templateId === 'new';
 

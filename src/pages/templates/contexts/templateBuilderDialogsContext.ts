@@ -7,9 +7,8 @@ export interface TemplateBuilderDialogsContextType {
   showDeleteBlockDialog: (block: BaseBlock) => void;
 }
 
-export const TemplateBuilderDialogsContext =
-  createContext<TemplateBuilderDialogsContextType>({
-    showAddChildBlockDialog: () => {},
-    showEditBlockDialog: () => {},
-    showDeleteBlockDialog: () => {},
-  });
+export const TemplateBuilderDialogsContext = createContext<TemplateBuilderDialogsContextType>({
+  showAddChildBlockDialog: () => {},
+  showEditBlockDialog: () => {},
+  showDeleteBlockDialog: () => {},
+});

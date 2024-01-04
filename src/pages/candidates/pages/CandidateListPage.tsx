@@ -24,8 +24,7 @@ export const CandidateListPage: React.FC = () => {
     api.list.get().then((listItems) => setState(listItems));
   }, []);
 
-  const onListItemClickHandler = (id: string) => () =>
-    navigate(`./${id}`);
+  const onListItemClickHandler = (id: string) => () => navigate(`./${id}`);
 
   return (
     <>

@@ -20,8 +20,7 @@ export const AddDataField: React.FC<AddDataFieldProps> = ({
   availableDataFields,
   onDataFieldAdd,
 }) => {
-  const [selectedDataFieldId, setSelectedDataFieldId] =
-    useState<string>(availableDataFields[0].id);
+  const [selectedDataFieldId, setSelectedDataFieldId] = useState<string>(availableDataFields[0].id);
 
   const onDataFieldIdChangeHandler = (event: SelectChangeEvent) => {
     setSelectedDataFieldId(event.target.value);

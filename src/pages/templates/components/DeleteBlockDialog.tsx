@@ -22,19 +22,17 @@ export const DeleteBlockDialog: React.FC<DeleteBlockDialogProps> = ({
   confirmText,
   onClose,
   onConfirm,
-}) => {
-  return (
-    <Dialog open={open}>
-      <DialogTitle>{title}</DialogTitle>
-      <DialogContent>
-        <Box sx={{ minWidth: 200 }}>Are you sure?</Box>
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={onClose}>Cancel</Button>
-        <Button variant="contained" onClick={onConfirm}>
-          {confirmText}
-        </Button>
-      </DialogActions>
-    </Dialog>
-  );
-};
+}) => (
+  <Dialog open={open}>
+    <DialogTitle>{title}</DialogTitle>
+    <DialogContent>
+      <Box sx={{ minWidth: 200 }}>Are you sure?</Box>
+    </DialogContent>
+    <DialogActions>
+      <Button onClick={onClose}>Cancel</Button>
+      <Button variant="contained" onClick={onConfirm}>
+        {confirmText}
+      </Button>
+    </DialogActions>
+  </Dialog>
+);

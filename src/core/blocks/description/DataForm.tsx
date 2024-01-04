@@ -14,16 +14,16 @@ export const DESCRIPTION_DEFAULT_FORM_STATE: DescriptionBlockData = {
 };
 
 export const DescriptionBlockDataForm: React.FC<
-  DescriptionBlockDataFormProps
+DescriptionBlockDataFormProps
 > = ({ data, onChange }) => {
-  const onFormControlChangeHandler =
-    (key: keyof DescriptionBlockData) =>
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      onChange({
-        ...data,
-        [key]: event.target.value,
-      });
-    };
+  const onFormControlChangeHandler = (key: keyof DescriptionBlockData) => (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    onChange({
+      ...data,
+      [key]: event.target.value,
+    });
+  };
 
   return (
     <StyledFormContainer>

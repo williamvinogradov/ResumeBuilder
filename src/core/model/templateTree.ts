@@ -76,9 +76,7 @@ export class TemplateTree {
         : DEFAULT_BLOCK_DATA[block.type];
     }
 
-    block.children.forEach((childBlock) =>
-      this.updateLeafs(childBlock, dataFields),
-    );
+    block.children.forEach((childBlock) => this.updateLeafs(childBlock, dataFields));
   }
 
   private findBlock(id: string): BaseBlock | null {

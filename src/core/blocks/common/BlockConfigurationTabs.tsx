@@ -11,7 +11,7 @@ export interface BlockDataWithPreviewProps {
 }
 
 export const BlockConfigurationTabs: React.FC<
-  BlockDataWithPreviewProps
+BlockDataWithPreviewProps
 > = ({
   activeTab,
   dataFormElement,

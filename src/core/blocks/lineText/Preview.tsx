@@ -6,5 +6,5 @@ export interface LineTextBlockPreviewProps {
 }
 
 export const LineTextBlockPreview: React.FC<
-  LineTextBlockPreviewProps
+LineTextBlockPreviewProps
 > = ({ data: { value } }) => <h2>{value}</h2>;

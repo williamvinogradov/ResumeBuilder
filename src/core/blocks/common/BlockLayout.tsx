@@ -18,18 +18,16 @@ export const BlockLayout: React.FC<BlockLayoutProps> = ({
     contentDirection,
   },
   children,
-}) => {
-  return (
-    <StyledBlockLayout
-      $flex={flex}
-      $contentAlign={contentAlign}
-      $color={color}
-      $padding={padding}
-      $backgroundColor={backgroundColor}
-      $margin={margin}
-      $contentDirection={contentDirection}
-    >
-      {children}
-    </StyledBlockLayout>
-  );
-};
+}) => (
+  <StyledBlockLayout
+    $flex={flex}
+    $contentAlign={contentAlign}
+    $color={color}
+    $padding={padding}
+    $backgroundColor={backgroundColor}
+    $margin={margin}
+    $contentDirection={contentDirection}
+  >
+    {children}
+  </StyledBlockLayout>
+);

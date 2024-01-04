@@ -19,23 +19,23 @@ export const BlockOptionsForm: React.FC<BlockOptionsProps> = ({
   options,
   onChange,
 }) => {
-  const onOptionChangeHandler =
-    (key: keyof BlockDisplayOptions) =>
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      onChange({
-        ...options,
-        [key]: event.target.value,
-      });
-    };
+  const onOptionChangeHandler = (key: keyof BlockDisplayOptions) => (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    onChange({
+      ...options,
+      [key]: event.target.value,
+    });
+  };
 
-  const onOptionSelectChangeHandler =
-    (key: keyof BlockDisplayOptions) =>
-    (event: SelectChangeEvent) => {
-      onChange({
-        ...options,
-        [key]: event.target.value,
-      });
-    };
+  const onOptionSelectChangeHandler = (key: keyof BlockDisplayOptions) => (
+    event: SelectChangeEvent,
+  ) => {
+    onChange({
+      ...options,
+      [key]: event.target.value,
+    });
+  };
 
   return (
     <StyledFormContainer>

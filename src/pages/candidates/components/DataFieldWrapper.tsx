@@ -17,18 +17,16 @@ export const DataFieldWrapper: React.FC<DataFieldWrapperProps> = ({
   name,
   children,
   onDelete,
-}) => {
-  return (
-    <StyledBorderBottomBlock>
-      <h4>{name}</h4>
-      <Stack direction="row" justifyContent="space-between">
-        <StyledFlexAllBlock>{children}</StyledFlexAllBlock>
-        <div>
-          <IconButton onClick={onDelete}>
-            <DeleteIcon />
-          </IconButton>
-        </div>
-      </Stack>
-    </StyledBorderBottomBlock>
-  );
-};
+}) => (
+  <StyledBorderBottomBlock>
+    <h4>{name}</h4>
+    <Stack direction="row" justifyContent="space-between">
+      <StyledFlexAllBlock>{children}</StyledFlexAllBlock>
+      <div>
+        <IconButton onClick={onDelete}>
+          <DeleteIcon />
+        </IconButton>
+      </div>
+    </Stack>
+  </StyledBorderBottomBlock>
+);

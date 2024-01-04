@@ -11,17 +11,17 @@ export interface LayoutBlockEditProps {
 }
 
 export const DescriptionBlockTemplate: React.FC<
-  LayoutBlockEditProps
-> = ({ block, onAddClick, onEditClick, onDeleteClick }) => {
-  return (
-    <BlockTemplateLayout
-      displayOptions={block.displayOptions}
-      hideAddAction
-      onAddClick={() => onAddClick(block)}
-      onEditClick={() => onEditClick(block)}
-      onDeleteClick={() => onDeleteClick(block)}
-    >
-      <DescriptionBlockPreview data={block.data} />
-    </BlockTemplateLayout>
-  );
-};
+LayoutBlockEditProps
+> = ({
+  block, onAddClick, onEditClick, onDeleteClick,
+}) => (
+  <BlockTemplateLayout
+    displayOptions={block.displayOptions}
+    hideAddAction
+    onAddClick={() => onAddClick(block)}
+    onEditClick={() => onEditClick(block)}
+    onDeleteClick={() => onDeleteClick(block)}
+  >
+    <DescriptionBlockPreview data={block.data} />
+  </BlockTemplateLayout>
+);
