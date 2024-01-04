@@ -1,5 +1,7 @@
 # Resume builder
 
+[Core concept overview & CV examples](https://github.com/williamvinogradov/ResumeBuilder/tree/main/documentation)
+
 ## Available Scripts
 
 Before run scripts:
